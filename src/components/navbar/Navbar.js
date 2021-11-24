@@ -6,17 +6,16 @@ import logo from './DLC.png'
 class Navbar extends Component{
     state={clicked:false}
 
-    handleclick=()=>{
-        this.handleClick({clicked: !this.state.clicked})
+    handleClick=()=>{
+        this.setState({clicked: !this.state.clicked})
     }
 
     render(){
         return(
             <nav className="NavbarItems">
                 <h1 className="Navbarlogo"> <img src={logo} alt="" className="Imgsize"/>
-                
                 </h1>
-                <div className="menuIcons" onClick={this.handleClick}>
+                <div className='menuIcons' onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
 
                 </div>
